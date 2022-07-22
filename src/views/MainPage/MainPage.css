@@ -54,13 +54,17 @@
 .text5{
     margin-left: 55.3%;
 }
+.fade-out-text{
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    z-index: 0;
+}
 .upper-fade-out>img{
     animation: travelUp 0.5s 1;
     animation-delay: 0;
     animation-fill-mode:forwards;
     opacity: 0;
     transition: opacity 0.3s linear;
-
 }
 
 @keyframes travelUp {

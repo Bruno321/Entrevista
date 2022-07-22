@@ -52,10 +52,10 @@ const MainPage = () => {
         setAnimation('upper-fade-out')
         
         // esperar q un timing o algo
-        setTimeout(()=>{
-            setModalActivated(true)
-            setModalToPop(modalToPop)
-        },520)
+        
+        setModalToPop(modalToPop)
+        setModalActivated(true)
+       
     }
     const popModal = () => {
         return <Modal modalToRender={modalToPop} />
@@ -66,36 +66,33 @@ const MainPage = () => {
           <div className='main-container' style={{
             backgroundImage: `url(${backgroundImage})`
             }}>
-                {modalActivated ? 
-                popModal()
-                : 
-                <>
-                    <div className={'left-container ' + animation}>
+                <div>
+                    {modalActivated ? popModal() : null}
+                </div>
+                <div className={'left-container ' + animation}>
                     {/* <div className="left-container"> */}
                         <img src={information_text} ></img>
                     </div>
                     <div className='right-container'>
-                        <div className='text0'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('about')}>
+                        <div className={modalActivated ? 'fade-out-text text0': 'text0' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('about')}>
                             <p id='0' style={{color:textColor[0].color}}>About us</p>
                         </div>
-                        <div className='text1'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('road')}>
+                        <div className={modalActivated ? 'fade-out-text text1': 'text1' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('road')}>
                             <p id='1' style={{color:textColor[1].color}}>Road map</p>
                         </div>
-                        <div className='text2'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('faq')}>
+                        <div className={modalActivated ? 'fade-out-text text2': 'text2' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('faq')}>
                             <p id='2' style={{color:textColor[2].color}}>FAQ</p>
                         </div>
-                        <div className='text3'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('join')}>
+                        <div className={modalActivated ? 'fade-out-text text3': 'text3' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('join')}>
                             <p id='3' style={{color:textColor[3].color}}>Join Us</p>
                         </div>
-                        <div className='text4'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('behind')}>
+                        <div className={modalActivated ? 'fade-out-text text4': 'text4' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('behind')}>
                             <p id='4' style={{color:textColor[4].color}}>Behind the design</p>
                         </div>
-                        <div className='text5'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('meet')}>
+                        <div className={modalActivated ? 'fade-out-text text5': 'text5' } onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('meet')}>
                             <p id='5' style={{color:textColor[5].color}}>Meet the Team</p>
                         </div>
-                    </div>
-                </> }
-                
+                </div>
           </div>
         </div>
     )

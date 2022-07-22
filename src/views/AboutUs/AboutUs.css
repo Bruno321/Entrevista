@@ -1,12 +1,27 @@
 .about-container{
     padding: 100px;
-    width: 100%;
-    opacity: 1;
-    transition: opacity 1s linear;
 }
+
 .about-title-container{
-    height: 35%;
+    margin-top: 100px;
+    animation: travellUp 0.5s 1;
+    animation-delay: 0.1s;
+    animation-fill-mode:forwards;
+
+    opacity: 1;
+    transition: opacity 0.3s linear;
 }
+/* .about-title-container>img{
+  
+    animation: travellUp 0.5s 1;
+    animation-delay: 0.1s;
+    animation-fill-mode:forwards;
+   
+} */
+@keyframes travellUp {
+    from {margin-top: 100px;}
+    to {margin-top: 0px}
+  }
 .about-text-wrapper{
     padding: 80px;
 }
