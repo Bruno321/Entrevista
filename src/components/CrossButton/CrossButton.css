@@ -1,0 +1,27 @@
+.cross-button{
+    width: 10%;
+    height: 100%;
+}
+.open-animation>img{
+    animation: travelRight 0.5s 1;
+    animation-delay: 0.1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes travelRight {
+    from {margin-left: 0%;}
+    to {margin-left: 200%;}
+  }
+
+.close-animation>img{
+    animation: travelLeft 0.5s 1;
+    animation-delay: 0.1s;
+    animation-fill-mode:backwards;
+}
+@keyframes travelLeft {
+    from {margin-left: 200%;}
+    to {margin-left: 0%;}
+  }
+.cross-button>img:hover{
+    cursor: pointer;
+}

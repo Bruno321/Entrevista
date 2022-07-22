@@ -10,70 +10,70 @@ import CrossButton from "../../components/CrossButton/CrossButton";
 const MeetTheTeam = () => {
     const data = [
         {
-            img:'',
+            img:'user_1',
             name:'Patrick C.',
             position: 'CEO',
             icons:['twitter','linkedin','instagram'],
             type:'project'
         },
         {
-            img:'',
+            img:'user_2',
             name:'Seika L.',
             position: 'COO',
             icons:['twitter','linkedin','instagram'],
             type:'project'
         },
         {
-            img:'',
+            img:'user_3',
             name:'Zayed Z.',
             position: 'CTO',
             icons:['twitter','linkedin','instagram'],
             type:'project'
         },
         {
-            img:'',
+            img:'user_4',
             name:'Markus CMO',
             position: 'CEO',
             icons:['email'],
             type:'project'
         },
         {
-            img:'',
+            img:'user_5',
             name:'Yuichiro N.',
             position: 'Metalia CEO',
             icons:['twitter','linkedin','instagram'],
             type:'investor'
         },
         {
-            img:'',
+            img:'user_6',
             name:'Kengo N.',
             position: 'Investor',
             icons:['twitter','linkedin','instagram'],
             type:'investor'
         },
         {
-            img:'',
+            img:'unknown_user',
             name:'To Be Revealed',
             position: 'Investor',
             icons:['twitter','linkedin','instagram'],
             type:'revealInvestor'
         },
         {
-            img:'',
+            img:'unknown_user',
             name:'To Be Revealed',
             position: 'Investor',
             icons:['twitter','linkedin','instagram'],
             type:'revealInvestor'
         },
         {
-            img:'',
+            img:'unknown_user',
             name:'To Be Revealed',
             position: 'Investor',
             icons:['twitter','linkedin','instagram'],
             type:'revealInvestor'
         },
         {
-            img:'',
+            img:'unknown_user',
             name:'To Be Revealed',
             position: 'Investor',
             icons:['twitter','linkedin','instagram'],
@@ -105,22 +105,23 @@ const MeetTheTeam = () => {
     return (
         <div className="vertical-container">
             <div>
-                <div>
+                {/* <div className="title-card-container"> */}
                     <h1>Project Managment Team</h1>
-                </div>
-                <div className="horizontal-container">
-                    {managmentList.map((e)=>{
-                        return <TeamMemberCard data={e}/>
-                    })}
+                {/* </div> */}
+                <div className="horizontal-container1">
+                    <div style={{width:'55%',display:'flex',justifyContent:'flex-end'}}>
+                        {managmentList.map((e)=>{
+                            return (
+                                    <TeamMemberCard data={e}/>
+                            )
+                        })}
+                    </div>
                     <CrossButton />
                 </div>
             </div>
             <div >
-                <div>
-
                 <h1>Investors /VCs</h1>
-                </div>
-                <div className="horizontal-container">
+                <div className="horizontal-container2">
                         {investorsList.map((e)=>{
                         return <TeamMemberCard data={e}/>
                     })}
