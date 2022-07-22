@@ -1,0 +1,22 @@
+.join-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.join-container>div{
+    width: 50%;
+    height: 100%;
+}
+.join-text-container{
+    width: 61.5%;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.join-h1{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 23px;
+}

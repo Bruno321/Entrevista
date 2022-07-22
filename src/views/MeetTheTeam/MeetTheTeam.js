@@ -103,32 +103,34 @@ const MeetTheTeam = () => {
     console.log(managmentList)
     console.log(investorsList)
     return (
-        <div className="vertical-container">
-            <div>
-                {/* <div className="title-card-container"> */}
-                    <h1>Project Managment Team</h1>
-                {/* </div> */}
-                <div className="horizontal-container1">
-                    <div style={{width:'55%',display:'flex',justifyContent:'flex-end'}}>
-                        {managmentList.map((e)=>{
-                            return (
-                                    <TeamMemberCard data={e}/>
-                            )
+        <>
+            <CrossButton />
+            <div className="vertical-container">
+                <div>
+                    {/* <div className="title-card-container"> */}
+                        <h1>Project Managment Team</h1>
+                    {/* </div> */}
+                    <div className="horizontal-container1">
+                        <div style={{width:'55%',display:'flex',justifyContent:'flex-end'}}>
+                            {managmentList.map((e)=>{
+                                return (
+                                        <TeamMemberCard data={e}/>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div >
+                    <h1>Investors /VCs</h1>
+                    <div className="horizontal-container2">
+                            {investorsList.map((e)=>{
+                            return <TeamMemberCard data={e}/>
                         })}
                     </div>
-                    <CrossButton />
+                    <p>More investors and VC's to be revealed</p>
                 </div>
             </div>
-            <div >
-                <h1>Investors /VCs</h1>
-                <div className="horizontal-container2">
-                        {investorsList.map((e)=>{
-                        return <TeamMemberCard data={e}/>
-                    })}
-                </div>
-                <p>More investors and VC's to be revealed</p>
-            </div>
-        </div>
+        </>
     )
 }
 

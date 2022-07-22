@@ -1,0 +1,28 @@
+.faq-container{
+    width: 100%;
+    padding: 60px;
+    margin-left: 7%;
+}
+.title-faq-container{
+    display: flex;
+}
+.faq-question{
+    margin-top: 10px;
+}
+.faq-question>div{
+    display: flex;
+    align-items: center;
+}
+.h1{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 80px;
+    z-index: 2;
+}
+.h2{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 40px;
+    z-index: 2;
+    margin-left: 10px;
+}

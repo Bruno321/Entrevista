@@ -45,10 +45,17 @@ const MainPage = () => {
     }
 
     const [modalActivated,setModalActivated] = useState(false)
+    const [animation,setAnimation] = useState('')
     const [modalToPop,setModalToPop] = useState('')
     const activateModal = (modalToPop) => {
-        setModalActivated(true)
-        setModalToPop(modalToPop)
+        // iniciar transicion
+        setAnimation('upper-fade-out')
+        
+        // esperar q un timing o algo
+        setTimeout(()=>{
+            setModalActivated(true)
+            setModalToPop(modalToPop)
+        },520)
     }
     const popModal = () => {
         return <Modal modalToRender={modalToPop} />
@@ -63,8 +70,9 @@ const MainPage = () => {
                 popModal()
                 : 
                 <>
-                    <div className='left-container'>
-                        <img src={information_text}></img>
+                    <div className={'left-container ' + animation}>
+                    {/* <div className="left-container"> */}
+                        <img src={information_text} ></img>
                     </div>
                     <div className='right-container'>
                         <div className='text0'onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('about')}>

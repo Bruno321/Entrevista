@@ -1,6 +1,7 @@
 .cross-button{
-    width: 10%;
-    height: 100%;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 4%;
 }
 .open-animation>img{
     animation: travelRight 0.5s 1;
@@ -9,8 +10,8 @@
 }
 
 @keyframes travelRight {
-    from {margin-left: 0%;}
-    to {margin-left: 200%;}
+    from {margin-left: 50%;}
+    to {margin-left: 80vh;}
   }
 
 .close-animation>img{
@@ -19,8 +20,8 @@
     animation-fill-mode:backwards;
 }
 @keyframes travelLeft {
-    from {margin-left: 200%;}
-    to {margin-left: 0%;}
+    from {margin-left: 80vh;}
+    to {margin-left: 50%;}
   }
 .cross-button>img:hover{
     cursor: pointer;

@@ -1,0 +1,27 @@
+.about-container{
+    padding: 100px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+.about-title-container{
+    height: 35%;
+}
+.about-text-wrapper{
+    padding: 80px;
+}
+.about-title{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 35px;
+}
+.about-text{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 35px;
+}
+.about-final{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 25px;
+}
