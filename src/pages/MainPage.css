@@ -23,7 +23,28 @@
     font-size: 30px;
     letter-spacing: 2px;
 }
+.right-container>p:hover{
+    cursor: pointer;
+}
 #text0{
-    margin-top: 13.5%;
+    margin-top: 11.5%;
     margin-left: 13.5%;
+}
+#text1{
+    /* margin-top: 13.8%; */
+    margin-top: 13.4%;
+    margin-left: 5.5%;
+}
+#text2{
+    margin-left: 66%;
+}
+#text3{
+    margin-left: 37.5%;
+}
+#text4{
+    margin-top: 5.8%;
+    margin-left: 4.4%;
+}
+#text5{
+    margin-left: 55.3%;
 }

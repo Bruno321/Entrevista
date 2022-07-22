@@ -25,7 +25,7 @@ export const MainPage = () => {
                     <p id='text0'>About us</p>
                     <p id='text1'>Roadmap</p>
                     <p id='text2'>FAQ</p>
-                    <p id='text3'>Join us</p>
+                    <p id='text3'>Join Us</p>
                     <p id='text4'>Behind the design</p>
                     <p id='text5'>Meet the team</p>
                 </div>
