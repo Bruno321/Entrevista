@@ -1,0 +1,25 @@
+.vertical-container{
+    width: 100%;
+}
+.vertical-container>div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vertical-container>div>p{
+    font-family: 'Fredoka';
+    color: white;
+}
+.vertical-container>div>h1{
+    font-family: 'Fredoka';
+    color: white;
+    font-weight: bold;
+}
+.horizontal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

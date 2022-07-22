@@ -10,7 +10,7 @@ import discord from '../../assets/img/discord.png'
 import instagram from '../../assets/img/instagram.png'
 import email from '../../assets/img/email.png'
 
-export const Header = () => {
+const Header = () => {
  
     return(
         <div className='header'>

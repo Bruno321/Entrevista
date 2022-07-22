@@ -1,6 +1,6 @@
 .main-container{
     width: 100%;
-    height: 90vh;
+    height: 92vh;
     display: flex;
 }
 .left-container{
@@ -17,34 +17,40 @@
     height: 100%;
 
 }
-.right-container>p{
+.right-container>div{
+    /* display: inline-block; */
+    width: fit-content;
+}
+.right-container>div>p{
     font-family: 'Fredoka';
-    color: white;
     font-size: 30px;
     letter-spacing: 2px;
+    width: 100%;
 }
-.right-container>p:hover{
+.right-container>div>p:hover{
     cursor: pointer;
+    text-shadow: 1px 3px 5px #D9D1FF;
+    transition: 0.5s;
 }
-#text0{
+.text0{
     margin-top: 11.5%;
     margin-left: 13.5%;
 }
-#text1{
-    /* margin-top: 13.8%; */
+.text1{
     margin-top: 13.4%;
     margin-left: 5.5%;
+    opacity: 1;
 }
-#text2{
+.text2{
     margin-left: 66%;
 }
-#text3{
+.text3{
     margin-left: 37.5%;
 }
-#text4{
+.text4{
     margin-top: 5.8%;
     margin-left: 4.4%;
 }
-#text5{
+.text5{
     margin-left: 55.3%;
 }
