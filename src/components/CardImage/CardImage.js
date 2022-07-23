@@ -3,9 +3,10 @@ import React from "react";
 // Styles
 import './CardImage.css'
 
-const CardImage = ({data}) => {
+const CardImage = ({data,handleClick}) => {
+    
     return (
-        <img className="card-image" src={require(`../../assets/img/${data.img}.png`)}></img>
+        <img id={data.id} className="card-image" src={require(`../../assets/img/${data.img}.png`)} onClick={handleClick}/>
     )
 }
 

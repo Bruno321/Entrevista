@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 // Components
 import CrossButton from "../../components/CrossButton/CrossButton";
@@ -12,6 +12,7 @@ import '../../assets/css/animations.css'
 import design_title from '../../assets/img/design_title.png'
 import left_arrow from '../../assets/img/left_arrow.png'
 import right_arrow from '../../assets/img/right_arrow.png'
+import CardImageDetail from "../../components/CardImageDetail/CardImageDetail";
 
 const Design = ({hideModal}) => {
 
@@ -32,10 +33,21 @@ const Design = ({hideModal}) => {
         {img:'pj13',id:13},
     ]
 
+    const [activateModal,setActivateModal] = useState(false)
+    const [id,setId] = useState()
+    const handleClick = (e) => {
+        setActivateModal(!activateModal)
+        setId(e.currentTarget.id)
+    }
+
     return (
         <>
             <CrossButton hideModal={hideModal} />
-            <div className="design-container">
+            {/* <div className={activateModal ? 'design-fade-in':null}> */}
+            <div className={`design-modal ${activateModal ? 'design-fade-in':null}`}>
+                {activateModal ? <CardImageDetail id={id} handleClick={handleClick}/>: null}
+            </div>
+            <div className={activateModal ? 'design-fade-out design-container':'design-container'}>
                 <div>
                     <div className="design-title-container fade-in second-move-up">
                         <img src={design_title} />
@@ -60,7 +72,7 @@ const Design = ({hideModal}) => {
                                 {data.map((e)=>{
                                     return (
                                         <div className="design-card-container">
-                                            <CardImage data={e} />
+                                            <CardImage data={e} handleClick={handleClick}/>
                                         </div>
                                     )
                                 })}
