@@ -1,0 +1,105 @@
+.road-container{
+    height: 80vh;
+    padding: 100px 100px 0 100px;
+    overflow: scroll;
+    /* overflow:auto;  */
+}
+
+.horizontal-road-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    height: 82vh;
+}
+.road-h1{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 50px;
+}
+.pre-mint{
+    height: 110vh;
+    text-align: center;
+}
+.pre-mint>h1{
+    padding: 30px;
+}
+.post-mint{
+    height: 290vh;
+    text-align: center;
+}
+.post-mint .phase-wrapper{
+    margin-top: 40px;
+}
+.post-mint>h1{
+    padding: 20px;
+}
+.phase-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.mental-map{
+    width: 50%;
+    height: 100%;
+}
+.road-text-container{
+    width: 50%;
+    height: 100%;
+}
+.space-evenly-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.final-divs{
+    width: 100%;
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.space-evenly-container-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.final-divs .space-evenly-container{
+    width: 70%;
+    height: 100px;
+}
+
+.vertical-space-evenly{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.utility{
+    height: 93vh;
+    width: 100%;
+    border-top-color: white;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+.final-text-text{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 25px;
+}
+.final-text-title{
+    font-family: 'Fredoka';
+    color: white;
+}
+.final-text-container{
+    width: 70%;
+    text-align:  justify;
+}
+.final-elements{
+    width: 70%;
+    display: flex;
+}
+.final-elements>div>p{
+    margin-top: 20px;
+}

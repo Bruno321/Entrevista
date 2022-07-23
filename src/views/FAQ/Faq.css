@@ -9,6 +9,7 @@
 .faq-question{
     margin-top: 10px;
 }
+
 .faq-question>div{
     display: flex;
     align-items: center;
@@ -25,4 +26,49 @@
     font-size: 40px;
     z-index: 2;
     margin-left: 10px;
+    cursor: pointer;
 }
+.hidden-faq{
+    cursor: context-menu;
+    overflow: hidden;
+    width: 50%;
+    height: 0;
+}
+.show-faq {
+    width: 50%;
+    height: 10vh;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+    overflow: hidden;
+    padding: 0;
+    overflow:hidden;
+    cursor: context-menu;
+}
+
+.faq-text{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 35px;
+}
+.rotate-arrow-down{
+    animation: arrow-down 1s forwards; /* IE 10+, Fx 29+ */
+}
+@keyframes arrow-down {
+    100% { 
+           transform:rotate(90deg);
+      }
+    
+  }
+  
+.rotate-arrow-up{
+    animation: arrow-up 1s forwards; /* IE 10+, Fx 29+ */
+}
+@keyframes arrow-up {
+    100% { 
+           transform:rotate(0deg);
+      }
+    
+  }

@@ -2,21 +2,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 100px;
+    margin-left: 5%;
 }
-.join-container>div{
+
+.join-left-wrapper{
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.join-right-wrapper{
+    width: 50%;
+    height: 100%;
+
 }
 .join-text-container{
-    width: 61.5%;
-    text-align: justify;
-    text-justify: inter-word;
+    
     padding-left: 70px;
     padding-right: 70px;
+    
 }
 .join-h1{
     font-family: 'Fredoka';
     color: white;
-    font-size: 23px;
+    font-size: 30px;
+}
+.join-h2{
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 25px;
+}
+.discord-button{
+    width: 40%;
+    height: 6vh;
+    margin-top: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border-color: white;
+    border: 2px solid white;
+}
+.discord-button:hover{
+    cursor: pointer;
+    background-color: white;
+    transition: 1s;
+}
+.discord-button:hover .join-h2{
+    color: black;
+
+}
+.join-text{
+    margin-top: 14%;
+    margin-left: 16%;
+    
 }

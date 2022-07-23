@@ -1,0 +1,69 @@
+.move-up{
+    animation: travelUp 0.5s 1;
+    animation-delay: 0;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes travelUp {
+    from {margin-bottom: 0;}
+    to {margin-bottom: 30%;}
+  }
+.second-move-up{
+    animation: secondTravelUp 0.5s 1;
+    animation-delay: 0;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes secondTravelUp {
+    from {margin-top: 20%;}
+    to {margin-top: 0%;}
+  }
+
+/*  */
+.third-move-up{
+    animation: thirdmMoveUp 0.5s 1;
+    animation-delay: 0;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes thirdmMoveUp {
+    from {margin-top: 0%;}
+    to {margin-top: 40%;}
+  }
+/*  */
+.move-down{
+    animation: travelDown 0.5s 1;
+    animation-delay: 0;
+    animation-fill-mode:forwards;
+}
+
+@keyframes travelDown {
+    /* from {margin-top: 0px;}
+    to {margin-top: 100px} */
+    from {margin-bottom: 30%;}
+    to {margin-bottom: 0%;}
+}
+
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.fade-in{
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.visible-item{
+    z-index: 1;
+    visibility: visible;
+}
+
+.invisible-item{
+    z-index: 0;
+    visibility: hidden;
+}

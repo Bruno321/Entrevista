@@ -1,0 +1,12 @@
+.phase-container{
+    height: 30px;
+    width: 115px;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.phase-container>h2{
+    color: white;
+    font-family: 'Fredoka';
+}

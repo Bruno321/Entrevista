@@ -1,48 +1,34 @@
-.vertical-container{
-    width: 100%;
-    padding: 40px;
+.meet-title{
+    color: white;
+    font-family: 'Fredoka';
+    padding:20px;
+    text-align: center;
 }
-.vertical-container>div{
-    width: 100%;
-    height: 50%;
+.meet-text{
+    color: white;
+    font-family: 'Fredoka';
+    font-size: 20px;
+    
+}
+.text-container{
+    padding:20px;
+    margin-top: 25px;
+    text-align: center;
+}
+/* .meet-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.vertical-container>div>p{
-    font-family: 'Fredoka';
-    color: white;
-    font-size: 30px;
-    z-index: 2;
-
-}
-.vertical-container>div>h1{
-    font-family: 'Fredoka';
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    z-index: 2;
-}
-.horizontal-container1{
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    height: 90%;
     width: 100%;
-    margin-top: 5px;
-}
-.horizontal-container2{
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    height: 90%;
-    width: 100%;
-    margin-top: 5px;
-}
-.title-card-container{
     height: 100%;
-    /* width: 100%; */
-
 }
+.meet-container>div{
+   width: 100%;
+   height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */

@@ -4,18 +4,19 @@ import CrossButton from "../../components/CrossButton/CrossButton";
 
 // Styles
 import './AboutUs.css'
+import '../../assets/css/animations.css'
 
 // Assets
 import about_title from '../../assets/img/about_title.svg'
 import faq_arrow from '../../assets/img/faq_arrow.png'
 
-const AboutUs = () => {
+const AboutUs = ({hideModal}) => {
     return (
         <>
-            <CrossButton />
-            <div className="about-container">
-                <div className="about-title-container">
-                    <img src={about_title} />
+            <CrossButton hideModal={hideModal}/>
+            <div className="about-container ">
+                <div className="about-title-container ">
+                    <img src={about_title} className='fade-in second-move-up'/>
                 </div>
                 <div className="about-text-wrapper">
                     <div style={{textAlign: 'justify',textJustify: 'inter-word'}}>

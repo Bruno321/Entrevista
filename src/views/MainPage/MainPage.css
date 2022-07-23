@@ -1,7 +1,18 @@
 .main-container{
+    /* width: 100%; */
+    /* height: 92vh; */
+    /* display: flex; */
+   
+}
+.modal-wrapper{
+    position: absolute;
     width: 100%;
     height: 92vh;
+}
+.body-wrapper{
     display: flex;
+    height: 92vh;
+    position: relative;
 }
 .left-container{
     width: 40%;
@@ -54,20 +65,3 @@
 .text5{
     margin-left: 55.3%;
 }
-.fade-out-text{
-    opacity: 0;
-    transition: opacity 0.3s linear;
-    z-index: 0;
-}
-.upper-fade-out>img{
-    animation: travelUp 0.5s 1;
-    animation-delay: 0;
-    animation-fill-mode:forwards;
-    opacity: 0;
-    transition: opacity 0.3s linear;
-}
-
-@keyframes travelUp {
-    from {margin-bottom: 0;}
-    to {margin-bottom: 50%;}
-  }

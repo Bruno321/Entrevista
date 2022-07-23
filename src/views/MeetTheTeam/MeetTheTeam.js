@@ -7,7 +7,7 @@ import './MeetTheTeam.css'
 import TeamMemberCard from "../../components/TeamMemberCard/TeamMemberCard";
 import CrossButton from "../../components/CrossButton/CrossButton";
 
-const MeetTheTeam = () => {
+const MeetTheTeam = ({hideModal}) => {
     const data = [
         {
             img:'user_1',
@@ -100,34 +100,30 @@ const MeetTheTeam = () => {
         setInvestorsList(arr2)
     },[])
 
-    console.log(managmentList)
-    console.log(investorsList)
     return (
         <>
-            <CrossButton />
-            <div className="vertical-container">
+            <CrossButton hideModal={hideModal}/>
+            <div className="meet-container">
                 <div>
-                    {/* <div className="title-card-container"> */}
-                        <h1>Project Managment Team</h1>
-                    {/* </div> */}
-                    <div className="horizontal-container1">
-                        <div style={{width:'55%',display:'flex',justifyContent:'flex-end'}}>
+                    <h1 className="meet-title">Project Managment Team</h1>
+                        <div style={{width:'100%',display:'flex', justifyContent:'center',alignItems:'center'}}>
                             {managmentList.map((e)=>{
                                 return (
                                         <TeamMemberCard data={e}/>
                                 )
                             })}
                         </div>
-                    </div>
                 </div>
                 <div >
-                    <h1>Investors /VCs</h1>
-                    <div className="horizontal-container2">
+                    <h1 className="meet-title">Investors /VCs</h1>
+                    <div style={{width:'100%',display:'flex', justifyContent:'center',alignItems:'center'}} >
                             {investorsList.map((e)=>{
                             return <TeamMemberCard data={e}/>
                         })}
                     </div>
-                    <p>More investors and VC's to be revealed</p>
+                    <div className="text-container">
+                        <text className="meet-text">More investors and VC's to be revealed</text>
+                    </div>
                 </div>
             </div>
         </>
