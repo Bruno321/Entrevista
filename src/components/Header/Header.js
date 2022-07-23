@@ -10,12 +10,12 @@ import discord from '../../assets/img/discord.png'
 import instagram from '../../assets/img/instagram.png'
 import email from '../../assets/img/email.png'
 
-const Header = () => {
+const Header = ({handleHeaderClick}) => {
  
     return(
         <div className='header'>
           <div className='title-container'>
-            <img src={title}></img>
+            <img src={title} onClick={handleHeaderClick}></img>
           </div>
           <div className='social-media-container'>
             <img src={twitter}></img>

@@ -103,3 +103,90 @@
 .final-elements>div>p{
     margin-top: 20px;
 }
+.exagerated-circle-div{
+    width: 300px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    word-wrap: break-word;
+}
+.circle-div{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    word-wrap: break-word;
+    
+}
+.exagerated-circle-div>h1{
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 20px;
+}
+.exagerated-circle-div>p{
+    font-family: 'Fredoka';
+    color: white;
+}
+.circle-div>h1{
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 20px;
+}
+.circle-div>p{
+    font-family: 'Fredoka';
+    color: white;
+}
+.bottom-botons-container{
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    margin-top: 50px;
+}
+.bottom-botons-container>div{
+    
+
+}
+.bottom-botons-container>div>b{
+    font-family: 'Fredoka';
+}
+.bottom-boton-right{
+    color: black;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+.bottom-boton-left{
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+}
+.hover-div{
+    /* position: absolute; */
+    width: 50%;
+    height: 50px;
+    background-color: white;
+}
+.circle-flex-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bottom-boton-right:hover{
+
+}
+.bottom-boton-left:hover{
+    
+}

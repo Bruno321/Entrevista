@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 // Componenets
 import CrossButton from "../../components/CrossButton/CrossButton";
@@ -23,6 +23,11 @@ import LargeOnlyText from "../../components/LargeOnlyText/LargeOnlyText";
 
 const RoadMap = ({hideModal}) => {
 
+    const [activateCircle,setActivateCircle] = useState(false)
+    const handleCircles = () => {
+        setActivateCircle(!activateCircle)
+    }
+
     return (
         <div>
             <CrossButton hideModal={hideModal}/>
@@ -46,7 +51,47 @@ const RoadMap = ({hideModal}) => {
                         </div>
                     </div>
                     <div className="mental-map">
-                        
+                        <div className="circle-flex-container">
+                            <div className="circle-div">
+                                <h1 style={{marginTop:'50px', fontSize:'40px'}}>IDEA</h1>
+                            </div>
+                        </div>
+                        <div className="circle-flex-container">
+                            {activateCircle ? null : <div className="circle-div">
+                                <h1 style={{marginTop:'35px'}}>KNOWLEDGE</h1>
+                                <p>ARTIST</p>
+                                <p>MARKETING</p>
+                                <p>DEVELOPERS</p>
+                            </div>}
+                            
+                            <div className={activateCircle ? 'exagerated-circle-div': 'circle-div'}>
+                                <h1>FUNDS REQUIRED</h1>
+                                <p>ACCES TO</p>
+                                <p>FUNDS</p>
+                                <p>VC'S</p>
+                                <p>INVESTORS</p>
+                            </div>
+                        </div>
+                        <div className="circle-flex-container">
+                            <div className="circle-div">
+                                <h1 style={ activateCircle ? { marginTop:'50px'} : {marginTop:'10px'}}>LAUNCH PROJECT</h1>
+                                {activateCircle ? null : 
+                                <>
+                                <p>BUILD</p>
+                                <p>COMMUNITY</p>
+                                <p>MINT PROCESS</p>
+                                <p>SELL OUT</p>
+                                </>}
+                                
+                            </div>
+                        </div>
+                        <div className="circle-flex-container">
+                            <div className="bottom-botons-container">
+                                {/* <div className="hover-div"></div> */}
+                                <div className="bottom-boton-right" onClick={handleCircles}><b>Regular Project</b></div>
+                                <div className="bottom-boton-left" onClick={handleCircles}><b>DesArts Project</b></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="pre-mint">

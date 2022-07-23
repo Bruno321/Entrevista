@@ -12,9 +12,10 @@ import '../../assets/css/animations.css'
 import main_background from '../../assets/img/main_background.png'
 import join_background from '../../assets/img/join_background.png'
 import information_text from '../../assets/img/information_text.svg'
-
+import big_right_arrow from '../../assets/img/big_right_arrow.png'
 
 const MainPage = () => {
+    const [initial,setInitial] = useState(true)
     const [backgroundImage,setBackgroundImage] = useState(main_background)
     const [textColor,setTextColor] = useState([
         {color:'white'},
@@ -95,11 +96,14 @@ const MainPage = () => {
     const popModal = () => {
         return <Modal modalToRender={modalToPop} hideModal={hideModal} />
     }
-    
+
+    const handleHeaderClick = () => {
+        setInitial(true)
+        hideModal()
+    }
     return(
         <div style={{backgroundColor:'black'}}>
-            <Header />
-
+            <Header handleHeaderClick={handleHeaderClick}/>
           <div className='main-container' style={{
             backgroundImage: `url(${backgroundImage})`
             }}>
@@ -109,26 +113,39 @@ const MainPage = () => {
                 <div className={'body-wrapper ' + finalClass}>
                     <div className={'left-container ' + animation}>
                         <img src={information_text} className={animation}></img>
+                        {/* <div className='hide-arrow'></div> */}
+                        <div className='arrow-container'>
+                            {initial ? <img src={big_right_arrow} className='css-arrow' onClick={()=>setInitial(!initial)}></img>:null}
+                        </div>
+                        {/* <div className='css-arrow'></div> */}
                     </div>
+
                     <div className='right-container'>
-                        <div  className='text0' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('about')}>
-                            <p id='0' style={{color:textColor[0].color}}>About us</p>
-                        </div>
-                        <div  className='text1' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('road')}>
-                            <p id='1' style={{color:textColor[1].color}}>Road map</p>
-                        </div>
-                        <div  className='text2' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('faq')}>
-                            <p id='2' style={{color:textColor[2].color}}>FAQ</p>
-                        </div>
-                        <div  className='text3' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('join')}>
-                            <p id='3' style={{color:textColor[3].color}}>Join Us</p>
-                        </div>
-                        <div  className='text4' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('behind')}>
-                            <p id='4' style={{color:textColor[4].color}}>Behind the design</p>
-                        </div>
-                        <div  className='text5' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('meet')}>
-                            <p id='5' style={{color:textColor[5].color}}>Meet the Team</p>
-                        </div>
+                        {initial ? 
+                            <div className='gif-container'>
+                                <img src={require(`../../assets/gif/gif.gif`)} />
+                            </div>
+                        :
+                        <>
+                            <div  className='text0' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('about')}>
+                                <p id='0' style={{color:textColor[0].color}}>About us</p>
+                            </div>
+                            <div  className='text1' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('road')}>
+                                <p id='1' style={{color:textColor[1].color}}>Road map</p>
+                            </div>
+                            <div  className='text2' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('faq')}>
+                                <p id='2' style={{color:textColor[2].color}}>FAQ</p>
+                            </div>
+                            <div  className='text3' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('join')}>
+                                <p id='3' style={{color:textColor[3].color}}>Join Us</p>
+                            </div>
+                            <div  className='text4' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('behind')}>
+                                <p id='4' style={{color:textColor[4].color}}>Behind the design</p>
+                            </div>
+                            <div  className='text5' onMouseOver={changueColor} onMouseLeave={resetColor} onClick={()=>activateModal('meet')}>
+                                <p id='5' style={{color:textColor[5].color}}>Meet the Team</p>
+                            </div>
+                        </>}
                     </div>
                 </div>
           </div>

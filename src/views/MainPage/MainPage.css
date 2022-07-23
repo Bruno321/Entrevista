@@ -14,14 +14,20 @@
     height: 92vh;
     position: relative;
 }
+.arrow-container{
+    /* background-color: white; */
+}
 .left-container{
     width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
+    /* background-color: black; */
+    flex-direction: column;
 }
 .left-container>img{
-    margin-left: 20%;
+    margin-left: 40%;
+    margin-top: 20%;
 }
 .right-container{
     width: 60%;
@@ -65,3 +71,55 @@
 .text5{
     margin-left: 55.3%;
 }
+.css-arrow{
+    width: 80px;
+    height: 80px;
+    animation:arrow-blink 1s infinite; 
+}
+.gif-container>img{
+    width: 500px;
+    height: 500px;
+    margin-left: 45%;
+    margin-top: 20%;    
+}
+@keyframes arrow-blink {
+    0%   { opacity: 0;}
+    100% { opacity: 1; 
+      }
+    
+  }
+/* .css-arrow{
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+    z-index: 1;
+    position: absolute;
+} 
+.css-arrow{
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    position: absolute;
+} 
+
+
+.hide-arrow{
+    z-index: 2;
+    width: 45px;
+    height: 70px;
+    background-color: black;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 3px;
+    animation: arrowBlink 2s infinite; 
+
+} 
+
+@keyframes arrowBlink {
+    0%   {margin-left: 3px;}
+    100% {margin-left: -35px;}
+}  */
